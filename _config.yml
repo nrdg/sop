@@ -1,0 +1,8 @@
+# Book settings
+title: NRDG Standard Operating Procedures
+author: Neuroinformatics R&D Group (NRDG)
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
