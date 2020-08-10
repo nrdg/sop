@@ -1,7 +1,6 @@
-Welcome to your Jupyter Book
-============================
+Standard Operating Procedures
+=============================
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This website outlines the standard operating procedures for the Neuroinformatics R&D Group (NRDG) at the University of Washington Department of Psychology and eScience Institue.
 
-Check out the content pages bundled with this sample book to get started.
+The website includes information about our mission, vision and values, as well as practical information about how we do our research. 
