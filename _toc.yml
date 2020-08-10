@@ -1,6 +1,15 @@
 - file: intro
-- file: content
+- file: general/general
   sections:
-    - file: markdown
+    - file: general/mvv
+    - file: general/coc
+- file: comms/comms 
+  sections: 
+    - file: slack
+    - file: 
+- file: publishing/publishing
+  sections: 
+    - file: figures
+    - file: posters
+    - file: papers
     - file: notebooks
-    - file: mvv
