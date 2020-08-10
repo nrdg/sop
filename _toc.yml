@@ -12,3 +12,7 @@
     - file: posters
     - file: papers
     - file: notebooks
+- file: infra/infra
+  section:
+    - file: github
+    - file: aws
