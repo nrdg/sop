@@ -6,7 +6,6 @@
 - file: comms/comms 
   sections: 
     - file: slack
-    - file: 
 - file: publishing/publishing
   sections: 
     - file: figures
