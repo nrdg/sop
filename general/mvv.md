@@ -10,7 +10,7 @@ The brain is a tremendously complex system and in order to understand it we are 
 
 - We are a part of a broader community. Hence, we do not limit ourselves to contribution only to our own projects. On the contrary, to give our own work both a stronger foundation, as well as broader impact, we contribute to community projects whenever we can and aiming to push our contributions "up the stack" to the most general use possible. This allows us to collaborate with a broader community of developers and to contribute to a broader set of use-cases.
 
-- We are empowered to learn and apply new methods and new technologies.
+- We are empowered to learn, develop, and apply new methods and new technologies.
 
 
 ## Values 
