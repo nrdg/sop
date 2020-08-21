@@ -1,18 +1,22 @@
 - file: intro
 - part: general
+  file: general/general
   sections:
+    - file: 
     - file: general/mvv
     - file: general/coc
 - part: comms
+  file: comms/comms
   sections: 
-    - file: slack
+    - file: comms/slack
 - part: publishing/
   sections: 
     - file: publishing/figures
     - file: publishing/posters
     - file: publishing/papers
     - file: publishing/notebooks
-- part: infra/
+- part: infra
+  file: infra/infra
   section:
     - file: infra/github
     - file: infra/aws
