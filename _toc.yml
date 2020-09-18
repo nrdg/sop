@@ -1,22 +1,32 @@
 - file: intro
-- part: general
-  file: general/general
+- file: general/general
   sections:
-    - file: 
     - file: general/mvv
     - file: general/coc
-- part: comms
-  file: comms/comms
-  sections: 
+      sections:
+        - file: my_second_page_subsection
+- file: comms/comms
+  sections:
     - file: comms/slack
-- part: publishing/
-  sections: 
+    - file: general/coc
+      sections:
+        - file: my_second_page_subsection
+- file: publishing/publishing
+  sections:
     - file: publishing/figures
     - file: publishing/posters
     - file: publishing/papers
     - file: publishing/notebooks
-- part: infra
-  file: infra/infra
-  section:
+      sections:
+        - file: publishing/software/README
+          sections:
+          - file: publishing/software/01-from-notebook-to-module
+          - file: publishing/software/02-from-module-to-package
+          - file: publishing/software/03-setup-file
+          - file: publishing/software/04-testing
+          - file: publishing/software/05-continuous-integration
+          - file: publishing/software/06-what-next
+- file: infra/infra
+  sections:
     - file: infra/github
     - file: infra/aws
