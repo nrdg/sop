@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Python shareable Python libraries &#8212; NRDG Standard Operating Procedures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">NRDG Standard Operating Procedures</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Standard Operating Procedures
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../general/general.html">
+   General information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../comms/comms.html">
+   Communication
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../infra/infra.html">
+   Infrastructure
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/publishing/software/01-from-notebook-to-module.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#not-all-code-needs-to-be-shareable">
+   Not all code needs to be shareable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-notebook-to-module">
+   From notebook to module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-and-using-functions">
+   Importing and using functions
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="creating-python-shareable-python-libraries">
+<h1>Creating Python shareable Python libraries<a class="headerlink" href="#creating-python-shareable-python-libraries" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this tutorial is to show you the way to make your code
+more modular, more shareable and more robust.</p>
+<div class="section" id="not-all-code-needs-to-be-shareable">
+<h2>Not all code needs to be shareable<a class="headerlink" href="#not-all-code-needs-to-be-shareable" title="Permalink to this headline">¶</a></h2>
+<p>Not every analysis that you do on your data needs to be easy for others to use.
+Ideally, if you want your work to be reproducible, it will be possible for
+others to run your code and get the same results. But this is not what we are
+talking about here. In the course of your work, you will sometimes find that you
+are creating pieces of code that are useful for you in more than one place, and
+may also be useful to others. For example, collaborators in your lab, or other
+researchers in your field. These pieces of code deserve to be written and
+shared in a manner that others can easily adopt them into their code. To do
+so, the code needs to be packaged into a library. Here, we will look at the
+nuts and bolts of doing that.</p>
+</div>
+<div class="section" id="from-notebook-to-module">
+<h2>From notebook to module<a class="headerlink" href="#from-notebook-to-module" title="Permalink to this headline">¶</a></h2>
+<p>In the course of my work on analysis of diffusion MRI data, I have written the
+following code in a script or a Jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># analysis.ipynb or analysis.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">blob_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./input_data/blob.csv&#39;</span><span class="p">)</span>
+
+<span class="n">blob_radius</span> <span class="o">=</span> <span class="n">blob_data</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span>
+
+<span class="n">blob_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">blob_radius</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">blob_circ</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">blob_radius</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">area</span><span class="o">=</span><span class="n">blob_area</span><span class="p">,</span> <span class="n">circ</span><span class="o">=</span><span class="n">blob_circ</span><span class="p">))</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./output_data/blob_properties.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Unfortunately, this code is not very reusable, even while the results may be
+perfectly reproducible (provided the input data is accessible).</p>
+<p>This is because it mixes file input and output with computations and different
+computations with each other (e.g., computation of area and circumference).</p>
+<p>The first step is to identify what are reusable components of this script and
+to move these components into a module. For example, here the calculation of
+area and circumference seem like they could each be (separately) useful in many
+different contexts.</p>
+<p>Let’s isolate them and rewrite them as functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># analysis.ipynb or analysis.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="k">def</span> <span class="nf">calculate_area</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+
+<span class="k">def</span> <span class="nf">calculate_circ</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">circ</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+    <span class="k">return</span> <span class="n">circ</span>
+
+<span class="n">blob_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./input_data/blob.csv&#39;</span><span class="p">)</span>
+<span class="n">blob_radius</span> <span class="o">=</span> <span class="n">blob_data</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span>
+<span class="n">blob_area</span> <span class="o">=</span> <span class="n">calculate_area</span><span class="p">(</span><span class="n">blob_radius</span><span class="p">)</span>
+<span class="n">blob_circ</span> <span class="o">=</span> <span class="n">calculate_circ</span><span class="p">(</span><span class="n">blob_radius</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">area</span><span class="o">=</span><span class="n">blob_area</span><span class="p">,</span> <span class="n">circ</span><span class="o">=</span><span class="n">blob_circ</span><span class="p">))</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./output_data/blob_properties.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the next step, we might move these functions out into a separate file,
+and document what they do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geometry.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">calculate_area</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the area of a circle.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    r : float or array</span>
+<span class="sd">        The radius of a single circle or multiple circles</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    area : float or array</span>
+<span class="sd">        The calculated area/s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+
+<span class="k">def</span> <span class="nf">calculate_circ</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the circumference of a circle.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    r : float or array</span>
+<span class="sd">        The radius of a single circle or multiple circles</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    circ : float or array</span>
+<span class="sd">        The calculated circumference/s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">circ</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+    <span class="k">return</span> <span class="n">circ</span>
+</pre></div>
+</div>
+<p>Note that nothing is accidental about these docstrings. They carefully comply
+with the <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">numpy docstring
+guide</a>. This guide
+provides details about how to write documentation so that: 1) People who are
+used to reading documentation formatted in this way know how to read your
+documentation; and 2) Programs that automatically process documentation do what
+they are supposed to do with your docstrings. For example in converting the
+docstrings into webpages for online documentation (more about that later).</p>
+</div>
+<div class="section" id="importing-and-using-functions">
+<h2>Importing and using functions<a class="headerlink" href="#importing-and-using-functions" title="Permalink to this headline">¶</a></h2>
+<p>Before we continue, we need to know a bit about what happens when you
+call <code class="docutils literal notranslate"><span class="pre">import</span></code> statements in Python. When you type call <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">geometry</span></code>,
+Python starts by looking for a file called <code class="docutils literal notranslate"><span class="pre">geometry.py</span></code> in your present working
+directory.</p>
+<p>That means that if you saved <code class="docutils literal notranslate"><span class="pre">geomtry.py</span></code> alongside your analysis script, you
+can now rewrite that as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># analysis.ipynb or analysis.py</span>
+<span class="kn">import</span> <span class="nn">geometry</span> <span class="k">as</span> <span class="nn">geo</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">blob_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./input_data/blob.csv&#39;</span><span class="p">)</span>
+<span class="n">blob_radius</span> <span class="o">=</span> <span class="n">blob_data</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span>
+<span class="n">blob_area</span> <span class="o">=</span> <span class="n">geo</span><span class="o">.</span><span class="n">calculate_area</span><span class="p">(</span><span class="n">blob_radius</span><span class="p">)</span>
+<span class="n">blob_circ</span> <span class="o">=</span> <span class="n">geo</span><span class="o">.</span><span class="n">calculate_circ</span><span class="p">(</span><span class="n">blob_radius</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">area</span><span class="o">=</span><span class="n">blob_area</span><span class="p">,</span> <span class="n">circ</span><span class="o">=</span><span class="n">blob_circ</span><span class="p">))</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./output_data/blob_properties.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is already good, because now you can import and reuse these functions
+across many different analysis scripts without having to copy this code
+everywhere. In summary: you have transitioned this part of your code from a
+one-off notebook or script to a module. Next, let’s see how you transition from
+a module to a library.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./publishing/software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Neuroinformatics R&D Group (NRDG)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
