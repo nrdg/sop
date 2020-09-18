@@ -1,4 +1,4 @@
-## What next?
+# What next?
 
 You have created a software project that can easily be installed on your
 machine, and on other computers. You have future-proofed your software with
@@ -7,7 +7,7 @@ tests and made it available through GitHub. What next?
 There are a few further steps you can take, though we will not go over them in
 detail.
 
-### Making your software widely available
+## Making your software widely available
 
 You have uploaded your code to GitHub, which means that people can access the
 software and install it. To make it even more accessible and installable through
@@ -19,7 +19,7 @@ action to your repo that [automatically pushes updates to
 PyPI](https://github.com/pypa/gh-action-pypi-publish).
 
 
-### Documenting your software
+## Documenting your software
 
 You've already made the first step towards documentation, by including
 docstrings in your function definitions. A further step is to write more
@@ -34,7 +34,7 @@ there is a [GitHub Action](https://github.com/marketplace/actions/sphinx-build)
 that will automatically builds your Sphinx documentation and can upload it to a
 website.
 
-### Make your software citeable
+## Make your software citeable
 
 If you think that others will use the software that you produced in their
 research, it can be beneficial to you to get credit for your work through
@@ -63,9 +63,9 @@ Once the software (together with a short write up) is reviewed in this way, it
 is published as a paper and can be cited in a quantifiable way.
 
 
-### Being part of the community
+## Being part of the community
 
-#### Specializing late and pushing "up the stack"
+### Specializing late and pushing "up the stack"
 
 Another thing to think about is whether your software should really remain
 self-enclosed. If you think that what you have created complements an existing
@@ -80,7 +80,7 @@ software up to date and working, as other components of the ecosystem evolve.
 Finally, it gives you a community of peers to belong to and collaborat with,
 which is fun.
 
-#### Am I obliged to help random strangers use my software?
+### Am I obliged to help random strangers use my software?
 
 Now that your software is easy to install, other people might start using it.
 Inevitably, they might run into bugs and issues with the software. Some of

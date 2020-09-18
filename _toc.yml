@@ -4,8 +4,6 @@
     - file: general/mvv
     - file: general/coc
     - file: general/onboarding
-      sections:
-        - file: my_second_page_subsection
 - file: comms/comms
   sections:
     - file: comms/slack
