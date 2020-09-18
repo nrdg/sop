@@ -8,9 +8,6 @@
 - file: comms/comms
   sections:
     - file: comms/slack
-    - file: general/coc
-      sections:
-        - file: my_second_page_subsection
 - file: publishing/publishing
   sections:
     - file: publishing/figures
