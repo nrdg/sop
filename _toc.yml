@@ -14,14 +14,13 @@
     - file: publishing/papers
     - file: publishing/notebooks
       sections:
-        - file: publishing/software/README
-          sections:
-          - file: publishing/software/01-from-notebook-to-module
-          - file: publishing/software/02-from-module-to-package
-          - file: publishing/software/03-setup-file
-          - file: publishing/software/04-testing
-          - file: publishing/software/05-continuous-integration
-          - file: publishing/software/06-what-next
+        - file: publishing/software
+        - file: publishing/software/01-from-notebook-to-module
+        - file: publishing/software/02-from-module-to-package
+        - file: publishing/software/03-setup-file
+        - file: publishing/software/04-testing
+        - file: publishing/software/05-continuous-integration
+        - file: publishing/software/06-what-next
 - file: infra/infra
   sections:
     - file: infra/github

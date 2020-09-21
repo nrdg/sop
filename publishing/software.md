@@ -17,16 +17,16 @@ see how we set up continuous integration, as well as a few socio-technical
 constructs that make software broadly usable (if not useful...), and enable
 collaboration.
 
-# Table of contents
+## Table of contents
 
-1. [01-from-notebook-to-module.md](From notebook to module)
-1. [02-from-module-to-package.md](From module to package)
-1. [03-setup-file.md](The `setup.py` file)
-1. [04-testing.md](Software testing)
-1. [05-continuous-integration.md](Continuous integration)
-1. [06-what-next.md](A few next steps)
+1. [./software/01-from-notebook-to-module.md](From notebook to module)
+1. [./software/02-from-module-to-package.md](From module to package)
+1. [./software/03-setup-file.md](The `setup.py` file)
+1. [./software/04-testing.md](Software testing)
+1. [./software/05-continuous-integration.md](Continuous integration)
+1. [./software/06-what-next.md](A few next steps)
 
-# LICENSE
+### LICENSE
 
 Copyright (c) 2020 Ariel Rokem. This tutorial is released under the [CC-BY
 4.0](https://creativecommons.org/licenses/by/4.0/) license.
