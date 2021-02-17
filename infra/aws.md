@@ -2,6 +2,13 @@
 
 We use Amazon Web Services for compute and storage.
 
+## Batch computing with Cloudknot
+
+We use [Cloudknot](https://nrdg.github.io/cloudknot/) for batch computing. Use of CK requires additional permissions, so you will
+have to ask an administrator to provide these permissions, before you can run anything.
+
+Always use spot instances with several retries.
+
 ## "Cold" storage in Glacier
 
 When a dataset is not routinely accessed, it should be moved to cold storage in [Glacier](https://aws.amazon.com/glacier/)
