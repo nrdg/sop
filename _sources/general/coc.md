@@ -1,3 +1,1 @@
 # COC
-
-Need content here.
