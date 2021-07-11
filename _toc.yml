@@ -28,3 +28,4 @@ sections:
   sections:
   - file: infra/github
   - file: infra/aws
+  - file: infra/software_projects.md
