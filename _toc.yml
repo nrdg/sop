@@ -1,28 +1,30 @@
-- file: intro
+format: jb-article
+root: intro
+sections:
 - file: general/general
   sections:
-    - file: general/mvv
-    - file: general/coc
-    - file: general/onboarding
+  - file: general/mvv
+  - file: general/coc
+  - file: general/onboarding
 - file: comms/comms
   sections:
-    - file: comms/slack
+  - file: comms/slack
 - file: publishing/publishing
   sections:
-    - file: publishing/figures
-    - file: publishing/conference_abstracts
-    - file: publishing/posters
-    - file: publishing/papers
-    - file: publishing/notebooks
-      sections:
-        - file: publishing/software
-        - file: publishing/software/01-from-notebook-to-module
-        - file: publishing/software/02-from-module-to-package
-        - file: publishing/software/03-setup-file
-        - file: publishing/software/04-testing
-        - file: publishing/software/05-continuous-integration
-        - file: publishing/software/06-what-next
+  - file: publishing/figures
+  - file: publishing/conference_abstracts
+  - file: publishing/posters
+  - file: publishing/papers
+  - file: publishing/notebooks
+    sections:
+    - file: publishing/software
+    - file: publishing/software/01-from-notebook-to-module
+    - file: publishing/software/02-from-module-to-package
+    - file: publishing/software/03-setup-file
+    - file: publishing/software/04-testing
+    - file: publishing/software/05-continuous-integration
+    - file: publishing/software/06-what-next
 - file: infra/infra
   sections:
-    - file: infra/github
-    - file: infra/aws
+  - file: infra/github
+  - file: infra/aws
