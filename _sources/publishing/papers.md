@@ -1,6 +1,14 @@
 # Papers
 
-The bad news is that writing full papers is one of the hardest things we do.
+Academic papers provide a durable snapshot of our thinking about a particular
+topic in a particular point in time. They provide a great outlet for a creative
+synthesis of the different strands of a research project, starting from the
+relationship to previous research, through the methods that are employed,
+centering on the empirical findings, and ending with a meditation on the state
+of the world (also known as a discussion section). Because of that, papers can
+give their authors a tremendous amount of satisfaction. They are also important
+common currency in academic careers. So, we write papers. The bad news is that
+writing full papers is one of the hardest things we do.
 
 Where you start writing the paper is often one of the hardest things to decide.
 The good thing is that by the time you are writing the paper, you have probably
@@ -41,3 +49,10 @@ are interested. This rewards and encourages people to be involved in other
 people's projects and to help move that work along. It is primarily the
 responsibility of the first and last author to pay attention to the role that
 different people are playing.
+
+
+## Other resources
+
+[Matteo Carandini](https://www.carandinilab.net/home) wrote a short, succint and memorable [essay](https://drive.google.com/file/d/1RFzp3BV1tT4XQTGkGmopkmanjkN9UptD/view) that explains how to write a paper (with him).
+
+If you take only one of Carandini's recommendations to heart, it is that you should read ["The science of scientific writing"](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing) by Gopen and Swan (1990)
