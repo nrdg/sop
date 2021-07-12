@@ -16,8 +16,8 @@ sections:
   - file: publishing/posters
   - file: publishing/papers
   - file: publishing/notebooks
+  - file: publishing/software
     sections:
-    - file: publishing/software
     - file: publishing/software/01-from-notebook-to-module
     - file: publishing/software/02-from-module-to-package
     - file: publishing/software/03-setup-file
