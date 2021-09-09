@@ -1,1 +1,36 @@
 # Conference abstracts
+
+## Workflow
+
+Please coordinate with others about conference submission. First, make sure that
+you can actually go to the conference in question. As a general rule, students
+in the group can go to one conference per year to present on the group's budget,
+so long as we have funding for that. But it's best to confirm that before
+assuming it. Even if you have other funding to go to the conference, you want to
+make sure that the conference you have in mind is a good match to the work that
+you intend to present, so that it is a good use of your time. Also, it is best
+to consult with your co-authors about the readiness of the work for presentation
+at a conference. As a general rule, it is much better to miss a conference one
+year and present the following year, rather than submitting an abstract
+prematurely.
+
+If you are writing an abstract, be sure to double-check the specific
+instructions for the conference. Conferences vary widely in terms of the number
+of words (sometimes characters) they allow in abstracts, and whether or not they
+allow display items. If they do allow display items, it is a good idea to
+include a diagram or figure.
+
+Please make sure that you have a first draft for feedback by your co-authors at
+least 7 days before the conference submission deadline.
+
+
+## Content
+
+It is important that the abstract provide enough information to conference
+participants about whether. The first sentence should provide a funnel to draw
+potential interest, outlining what the general question or problem are that the
+work is tackling.
+
+The abstract title should communicate the findings clearly. Science should only
+very rarely be written in the form of a mystery novel, and this is definitely
+not one of these cases.
