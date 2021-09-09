@@ -24,6 +24,7 @@ software, preprint, etc.
 A few posters from our group that you can use as a starting point for your poster:
 
 [Adam's OHBM 2021 poster](https://github.com/richford/2021-OHBM-HBN-POD2-poster)
+
 [Ariel's SfN 2016 poster](https://github.com/arokem/2016-SfN-poster)
 
 Feel free to add more examples here!
