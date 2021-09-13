@@ -47,7 +47,7 @@ of work (e.g., end of a project, end of an academic year, or its beginning). It
 is jointly the responsible of Ariel and the person in question to make sure that
 these updates happen.
 
-To download a Word template file click [here](../assets/IDP_template.docx). This
+To download a Word template file click [here](https://github.com/nrdg/sop/raw/master/assets/IDP_template.docx). This
 template provides a good starting point for writing an IDP, with some links out
 to additional resources.
 
