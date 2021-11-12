@@ -23,14 +23,15 @@ include a diagram or figure.
 Please make sure that you have a first draft for feedback by your co-authors at
 least 7 days before the conference submission deadline.
 
-
 ## Content
-
-It is important that the abstract provide enough information to conference
-participants about whether. The first sentence should provide a funnel to draw
-potential interest, outlining what the general question or problem are that the
-work is tackling.
 
 The abstract title should communicate the findings clearly. Science should only
 very rarely be written in the form of a mystery novel, and this is definitely
 not one of these cases.
+
+It is important that the abstract provide enough information to conference
+participants about whether your presentation is worth a visit. In cases where
+results can be laid out clearly, do so within the first few sentences of the
+abstract. Generally, the first sentence should provide a funnel to draw
+potential interest, outlining what the general question or problem are that the
+work is tackling.
