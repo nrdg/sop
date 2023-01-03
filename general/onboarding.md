@@ -24,6 +24,9 @@ We use Amazon Web Services for some projects. If you need credentials to AWS to 
 While we try to vigorously apply the [principal of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), so that you have only the access you really need to do your work, please take care of any AWS credentials you might receive. Please do not post them anywhere public (don't commit them to a git repo!) and report any breach that happens, as soon as you discover it (if you commited credentials, let someone know as soon as possible!)
 ```
 
+4. Key-card access to CHN space. Ask Ariel to email the building manager with your UW student/employee number.
+
+
 ## Designing a individual development program
 
 An individual development program (or IDP) is a methodology used to set goals
