@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Running qsiprep on Hyak &#8212; NRDG Standard Operating Procedures</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'infra/qsiprep';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Standard Operating Procedures
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../general/general.html">General information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/mvv.html">Mission, Vision, Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/coc.html">COC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/onboarding.html">Onboarding</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../comms/comms.html">Communication</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../comms/slack.html">Slack</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publishing/publishing.html">Publishing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publishing/figures.html">How to create figures for publication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing/conference_abstracts.html">Conference abstracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing/posters.html">Posters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing/papers.html">Papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing/notebooks.html">Publishing with Jupter notebooks</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../publishing/software.html">Creating shareable Python software</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/01-from-notebook-to-module.html">Creating Python shareable Python libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/02-from-module-to-package.html">From module to package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/03-setup-file.html">The setup file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/04-testing.html">Software testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/05-continuous-integration.html">Continuous integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../publishing/software/06-what-next.html">What next?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="infra.html">Infrastructure</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="github.html">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws.html">Amazon Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_projects.html">Software projects that we develop and maintain</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/infra/qsiprep.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Running qsiprep on Hyak</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="running-qsiprep-on-hyak">
+<h1>Running qsiprep on Hyak<a class="headerlink" href="#running-qsiprep-on-hyak" title="Permalink to this heading">#</a></h1>
+<p>Running qsiprep with Docker is not available on Hyak, but the Docker container can be converted to Apptainer (formerly known as singularity) with the ‘apptainer build’ command.</p>
+<p>The Apptainer container can then be run on Hyak with:
+<code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir],dst=/data,ro</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir]/derivatives,dst=/out</span> <span class="pre">/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/qsiprep.sif</span> <span class="pre">/data</span> <span class="pre">/out</span> <span class="pre">participant</span> <span class="pre">--fs-license-file</span> <span class="pre">/data/fs_license.txt</span> <span class="pre">[flags]</span> <span class="pre">-w</span> <span class="pre">/scr</span></code>
+<code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">exec</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir],dst=/data,ro</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir]/derivatives,dst=/out</span> <span class="pre">/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/qsiprep.sif</span> <span class="pre">qsiprep</span> <span class="pre">/data</span> <span class="pre">/out</span> <span class="pre">participant</span> <span class="pre">--fs-license-file</span> <span class="pre">/data/fs_license.txt</span> <span class="pre">[flags]</span> <span class="pre">-w</span> <span class="pre">/scr</span></code>
+<code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">run</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir],dst=/data,ro</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir]/derivatives,dst=/out</span> <span class="pre">/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/qsiprep.sif</span> <span class="pre">/data</span> <span class="pre">/out</span> <span class="pre">participant</span> <span class="pre">--fs-license-file</span> <span class="pre">/data/fs_license.txt</span> <span class="pre">[flags]</span> <span class="pre">-w</span> <span class="pre">/scr</span></code>
+<code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">exec</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir],dst=/data,ro</span> <span class="pre">--mount</span> <span class="pre">type=bind,src=/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/[BIDS</span> <span class="pre">dir]/derivatives,dst=/out</span> <span class="pre">/gscratch/escience/[UW</span> <span class="pre">Net</span> <span class="pre">ID]/qsiprep.sif</span> <span class="pre">qsiprep</span> <span class="pre">/data</span> <span class="pre">/out</span> <span class="pre">participant</span> <span class="pre">--fs-license-file</span> <span class="pre">/data/fs_license.txt</span> <span class="pre">[flags]</span> <span class="pre">-w</span> <span class="pre">/scr</span></code></p>
+<p>In this example, the BIDS directory and qsiprep.sif container have been placed in /gscratch/escience/[UW Net ID] and fs_license.txt has been placed in the BIDS directory.</p>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
+<p>-w /scr has been used to specify the working directory as /scr
+<code class="docutils literal notranslate"><span class="pre">exec</span></code> requires <code class="docutils literal notranslate"><span class="pre">qsiprep</span></code> to be specified after the container, but <code class="docutils literal notranslate"><span class="pre">run</span></code> does not
+The derivatives directory must exist before running the command</p>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h2>
+<p>To capture and separate the output, one option is to run the command within a Python script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os.path</span> <span class="k">as</span> <span class="nn">op</span>
+
+<span class="n">log_path</span> <span class="o">=</span> <span class="s2">&quot;/gscratch/escience/[UW Net ID]/qsiprep_log.txt&quot;</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/gscratch/escience/[UW Net ID]/[BIDS dir]&quot;</span>
+<span class="n">out_path</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="s2">&quot;derivatives&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;apptainer run --mount type=bind,src=</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s2">,dst=/data,ro --mount type=bind,src=</span><span class="si">{</span><span class="n">out_path</span><span class="si">}</span><span class="s2">,dst=/out </span><span class="si">{</span><span class="n">sif_path</span><span class="si">}</span><span class="s2"> /data /out participant --fs-license-file /data/fs_license.txt [flags] -w /scr&quot;</span><span class="p">,</span>
+        <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">stdout</span><span class="o">=</span><span class="n">f</span><span class="p">,</span>
+    <span class="p">)</span>
+
+ <span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./infra"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Neuroinformatics R&D Group (NRDG)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
