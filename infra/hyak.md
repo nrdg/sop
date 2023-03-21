@@ -36,7 +36,7 @@ You can also submit a task to be queued and executed through slurm.
 The status of these jobs, as well as interactive sessions, can be seen with:
 `squeue -u [UW Net ID]`
 
-## Memory management
+## Managing your disk space 
 
 The home directory you begin in after logging in has limited memory. More (but not persistent) memory can be accessed by moving large files, caches, and working directories to /gscratch. For example:
 
