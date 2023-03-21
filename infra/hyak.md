@@ -38,7 +38,7 @@ The status of these jobs, as well as interactive sessions, can be seen with:
 
 ## Managing your disk space 
 
-The home directory you begin in after logging in has limited memory. More (but not persistent) memory can be accessed by moving large files, caches, and working directories to /gscratch. For example:
+The home directory you begin in after logging in has limited space. More (but not persistent) space can be accessed by moving large files, caches, and working directories to /gscratch. For example:
 
 `cd /gscratch/escience/`
 `mkdir [UW Net ID]`
