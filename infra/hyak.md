@@ -33,7 +33,7 @@ management. Because our home folders on hyak are *very* limited in terms of
 disk space, it is best to create the environments outside of our home folders.
 This can be done using the `-p` flag:
 
-    conda create -p /gscratch/escience/arokem/<env name>
+    conda create -p /gscratch/escience/<netID>/<env name>
 
 After creating it for the first time, you will want to activate the env every
 time you install packages and work with them.
@@ -42,7 +42,7 @@ time you install packages and work with them.
 
 Once resources have been allocated and the session begins, you can perform computational tasks. For example:
 
-`conda activate /gscratch/escience/arokem/<env name>`
+`conda activate /gscratch/escience/<netID>/<env name>`
 `python my_script.py`
 
 You may want to load modules that give you access to specific programs, such as
