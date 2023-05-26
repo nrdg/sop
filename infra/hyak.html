@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -336,9 +336,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">Logging in</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-session">Starting a session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-your-disk-space">Managing your disk space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-conda">Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-modules">Loading modules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs-to-slurm">Submitting jobs to slurm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-your-disk-space">Managing your disk space</a></li>
 </ul>
             </nav>
         </div>
@@ -360,25 +361,10 @@ document.write(`
 </section>
 <section id="starting-a-session">
 <h2>Starting a session<a class="headerlink" href="#starting-a-session" title="Permalink to this heading">#</a></h2>
-<p>In order to load miniconda and do other intensive tasks, you will need to start a session. For example:</p>
-<p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">gpu-a40</span> <span class="pre">-A</span> <span class="pre">escience</span> <span class="pre">--nodes=1</span> <span class="pre">--ntasks-per-node=4</span> <span class="pre">--time=2:00:00</span> <span class="pre">--mem=120G</span> <span class="pre">--pty</span> <span class="pre">/bin/bash</span></code></p>
+<p>In order to load miniconda and do other intensive tasks, you will need to start
+an interactive session. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">gpu-a40</span> <span class="pre">-A</span> <span class="pre">escience</span> <span class="pre">--nodes=1</span> <span class="pre">--ntasks-per-node=4</span> <span class="pre">--time=2:00:00</span> <span class="pre">--pty</span> <span class="pre">/bin/bash</span></code></p>
 <p>More information on flags can be found <a class="reference external" href="https://wiki.cac.washington.edu/display/hyakusers/Mox_scheduler">here</a></p>
-</section>
-<section id="loading-modules">
-<h2>Loading modules<a class="headerlink" href="#loading-modules" title="Permalink to this heading">#</a></h2>
-<p>Once resources have been allocated and the session begins, you can perform computational tasks. For example:</p>
-<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">ssmc/miniconda</span></code>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">my_environment</span></code>
-<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_script.py</span></code></p>
-<p>You may want to load other modules, such as
-<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">apptainer</span></code></p>
-<p>More information on modules can be found <a class="reference external" href="https://hyak.uw.edu/docs/tools/modules/">here</a></p>
-</section>
-<section id="submitting-jobs-to-slurm">
-<h2>Submitting jobs to slurm<a class="headerlink" href="#submitting-jobs-to-slurm" title="Permalink to this heading">#</a></h2>
-<p>You can also submit a task to be queued and executed through slurm.</p>
-<p>The status of these jobs, as well as interactive sessions, can be seen with:
-<code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">[UW</span> <span class="pre">Net</span> <span class="pre">ID]</span></code></p>
 </section>
 <section id="managing-your-disk-space">
 <h2>Managing your disk space<a class="headerlink" href="#managing-your-disk-space" title="Permalink to this heading">#</a></h2>
@@ -386,6 +372,34 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/gscratch/escience/</span></code>
 <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[UW</span> <span class="pre">Net</span> <span class="pre">ID]</span></code></p>
 <p>Any command with a cache or working directory flag should probably be pointed to a location in /gscratch, or a memory error may result.</p>
+</section>
+<section id="setting-up-conda">
+<h2>Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#setting-up-conda" title="Permalink to this heading">#</a></h2>
+<p>For many of the tasks that we do, we will want to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> for environment
+management. Because our home folders on hyak are <em>very</em> limited in terms of
+disk space, it is best to create the environments outside of our home folders.
+This can be done using the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda create -p /gscratch/escience/&lt;netID&gt;/&lt;env name&gt;
+</pre></div>
+</div>
+<p>After creating it for the first time, you will want to activate the env every
+time you install packages and work with them.</p>
+</section>
+<section id="loading-modules">
+<h2>Loading modules<a class="headerlink" href="#loading-modules" title="Permalink to this heading">#</a></h2>
+<p>Once resources have been allocated and the session begins, you can perform computational tasks. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">/gscratch/escience/&lt;netID&gt;/&lt;env</span> <span class="pre">name&gt;</span></code>
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_script.py</span></code></p>
+<p>You may want to load modules that give you access to specific programs, such as
+<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">apptainer</span></code>. Conda does not require a module and runs as soon as
+you log in.</p>
+<p>More information on modules can be found <a class="reference external" href="https://hyak.uw.edu/docs/tools/modules/">here</a></p>
+</section>
+<section id="submitting-jobs-to-slurm">
+<h2>Submitting jobs to slurm<a class="headerlink" href="#submitting-jobs-to-slurm" title="Permalink to this heading">#</a></h2>
+<p>You can also submit a task to be queued and executed through <a class="reference external" href="https://hyak.uw.edu/docs/compute/scheduling-jobs">slurm</a>.</p>
+<p>The status of these jobs, as well as interactive sessions, can be seen with:
+<code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">[UW</span> <span class="pre">Net</span> <span class="pre">ID]</span></code>.</p>
 </section>
 </section>
 
@@ -415,9 +429,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -434,9 +454,10 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">Logging in</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-session">Starting a session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-your-disk-space">Managing your disk space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-conda">Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-modules">Loading modules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs-to-slurm">Submitting jobs to slurm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-your-disk-space">Managing your disk space</a></li>
 </ul>
   </nav></div>
 
@@ -445,7 +466,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -475,7 +496,7 @@ By Neuroinformatics R&D Group (NRDG)
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -484,8 +505,8 @@ By Neuroinformatics R&D Group (NRDG)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
