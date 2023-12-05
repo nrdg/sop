@@ -17,7 +17,7 @@ We use git and GitHub to keep track of our projects. Create a GitHub user-name [
 
 3. Get on AWS
 
-We use Amazon Web Services for some projects. If you need credentials to AWS to do your work
+We use Amazon Web Services for some projects. If you need credentials to AWS to do your work, as Ariel to give you the access.
 
 
 ```{note}
@@ -59,3 +59,22 @@ If you are a student and you need further career guidance, it might also be a go
 ## Training in responsible conduct of research
 
 There are many ways to get training on responsible conduct of research at UW. At the very least, everyone in the group is required to undergo CITI training as part of their onboarding process. Instructions are available on [this webpage](https://www.washington.edu/research/hsd/training/required-training/web-based-citi-training/). In addition, there are courses that you can take to fulfill the requirements of particular training programs (e.g., some fellowships require extensive training on the topic). Some resources on this topic are available on [this page](https://www.washington.edu/research/compliance/responsible-conduct-of-research-rcrtraining/). In addition, given the work that we do, it is a good idea to take a course specifically about data science ethics. There is a list on [this page](https://escience.washington.edu/data-science-courses-at-the-university-of-washington/).
+
+## Mentoring philosophy
+
+The goal of scientific mentorship is for trainees to develop their ability to
+conduct independent research. The starting point varies between individual
+trainees, and mentorship must meet every mentee where they are. Growing in
+indepenence and ability entails encouraging a growth mindset, the outlook that
+argues that every individual can change their skills and abilities with
+learning and experience. This entails providing challenging research objectives
+to achieve and providing the means and guidance to achieve these objectives. At
+the same time, mentorship of individual trainees needs to be designed to help
+them meet their own individual goals, while also pursuing the goals of our
+overall research program. A research program as broad and ambitious as the one
+that we pursue at the NRDG can accommodate individuals with many different
+goals, and get them closer to discovering and achieving these disparate goals.
+For example, trainees may be interested to explore different options for the
+career path that they would pursue, and the mentorship and training that will
+be provided should be tailored to prepare them for the career path of their
+choice.

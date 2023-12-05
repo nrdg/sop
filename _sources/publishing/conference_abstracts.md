@@ -1,5 +1,20 @@
 # Conference abstracts
 
+## Conferences we tend to go to (or might go to):
+
+- [OHBM](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=1).
+- [ISMRM](https://www.ismrm.org/).
+- [Society for Neuroscience](https://www.sfn.org/).
+- [MICCAI](http://www.miccai.org/) annual meeting.
+  - The [CDMRI workshop](http://cmic.cs.ucl.ac.uk/cdmri/) within MICCAI is particularly relevant to our interests.
+- [IEEE ISBI](https://biomedicalimaging.org/2024/).
+- [Supercomputing](https://supercomputing.org/).
+- [Scientific Computing in Python](https://conference.scipy.org/)
+- [Cascadia R Conf](https://cascadiarconf.com/).
+- [ARVO](https://www.arvo.org/annual-meeting/).
+- [RSNA](https://www.rsna.org/annual-meeting).
+- [NeurIPS](https://neurips.cc/).
+
 ## Workflow
 
 Please coordinate with others about conference submission. First, make sure that
