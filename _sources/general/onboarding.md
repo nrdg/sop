@@ -26,6 +26,12 @@ While we try to vigorously apply the [principal of least privilege](https://en.w
 
 4. Key-card access to CHN space. Ask Ariel to email the building manager with your UW student/employee number.
 
+## Getting to know the work of the lab
+
+If you are interested in working with us and want to know a bit more about the
+work that we do, and learn how to do it, a good place to start is
+[our onboarding repo](https://github.com/nrdg/Tractometry_Introduction).
+
 
 ## Designing a individual development program
 
