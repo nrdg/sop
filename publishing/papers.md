@@ -24,9 +24,13 @@ the logic flows.
 
 Another good place to start is by writing down the methods.
 
-Share ideas with co-authors and collaborators early on in the process A google
+Share ideas with co-authors and collaborators early on in the process. A google
 doc, Overleaf doc, or a GitHub repository are all good places for people to
 read/comment/suggest.
+
+[Quarto](https://quarto.org/) offers a really interesting option for weaving
+together computations, figures, and text into rendered publication-ready
+documents.
 
 ## Authorship
 
@@ -53,6 +57,8 @@ different people are playing.
 
 ## Other resources
 
-[Matteo Carandini](https://www.carandinilab.net/home) wrote a short, succint and memorable [essay](https://drive.google.com/file/d/1RFzp3BV1tT4XQTGkGmopkmanjkN9UptD/view) that explains how to write a paper (with him).
+[Matteo Carandini](https://www.carandinilab.net/home) wrote a short, succint and memorable [essay](https://www.eneuro.org/content/eneuro/9/6/ENEURO.0497-22.2022.full.pdf) that explains how to write a paper (with him, and more generally).
 
-If you take only one of Carandini's recommendations to heart, it is that you should read ["The science of scientific writing"](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing) by Gopen and Swan (1990)
+One of the main take-home messages of this essay is that a good place to start writing your results (maybe once you have those figures mentioned above) is by writing down a series of topic sentences for the paragraphs that will make up that part of the article (and then then other parts as well).
+
+If you have more time, and want to Carandini's recommendations to heart, you can also read ["The science of scientific writing"](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing) by Gopen and Swan (1990).
