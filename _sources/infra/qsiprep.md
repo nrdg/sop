@@ -1,6 +1,6 @@
 # Running qsiprep on Hyak
 
-Running qsiprep with Docker is not available on Hyak, but the Docker container can be converted to Apptainer (formerly known as singularity) with the 'apptainer build' command. 
+Running qsiprep with Docker is not available on Hyak, but the Docker container can be converted to Apptainer (formerly known as singularity) with the 'apptainer build' command.
 
 The Apptainer container can then be run on Hyak with:
 `apptainer run --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir],dst=/data,ro --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir]/derivatives,dst=/out /gscratch/escience/[UW Net ID]/qsiprep.sif /data /out participant --fs-license-file /data/fs_license.txt [flags] -w /scr`
@@ -8,7 +8,7 @@ The Apptainer container can then be run on Hyak with:
 `singularity run --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir],dst=/data,ro --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir]/derivatives,dst=/out /gscratch/escience/[UW Net ID]/qsiprep.sif /data /out participant --fs-license-file /data/fs_license.txt [flags] -w /scr`
 `singularity exec --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir],dst=/data,ro --mount type=bind,src=/gscratch/escience/[UW Net ID]/[BIDS dir]/derivatives,dst=/out /gscratch/escience/[UW Net ID]/qsiprep.sif qsiprep /data /out participant --fs-license-file /data/fs_license.txt [flags] -w /scr`
 
-In this example, the BIDS directory and qsiprep.sif container have been placed in /gscratch/escience/[UW Net ID] and fs_license.txt has been placed in the BIDS directory. 
+In this example, the BIDS directory and qsiprep.sif container have been placed in /gscratch/escience/[UW Net ID] and fs_license.txt has been placed in the BIDS directory.
 
 ## Notes
 -w /scr has been used to specify the working directory as /scr
@@ -17,6 +17,7 @@ The derivatives directory must exist before running the command
 
 ## Output
 To capture and separate the output, one option is to run the command within a Python script:
+
 ```
 import subprocess
 import os.path as op
