@@ -30,7 +30,7 @@ While we try to vigorously apply the [principal of least privilege](https://en.w
 
 If you are interested in working with us and want to know a bit more about the
 work that we do, and learn how to do it, a good place to start is
-[our onboarding repo](https://github.com/nrdg/Tractometry_Introduction).
+[our git ronboarding repo](https://github.com/nrdg/Tractometry_Introduction).
 
 
 ## Designing a individual development program
