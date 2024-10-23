@@ -46,11 +46,14 @@ lot of opportunities for interaction, and we often hold joint group meetings.
 I definitely don't discourage anyone from publishing in Nature/Science... I
 understand and can generally agree with a philosophy that encourages
 substantial and broadly impactful work (the kind that could be published in
-those journals). But I also think that there is a lot to be said for work
-that is specialized and more detailed than the kind of work that gets
-published in these journals. A lot of our work is rather technical in
-nature and is much more suitable. One day maybe we'll publish a
-Nature/Science article, but that hasn't happened yet (see the group's
+those journals). But I also think that there is a lot to be said for work that
+is specialized and more detailed than the kind of work that gets published in
+these journals. A lot of our work is rather technical in nature and is much
+more suitable for more specialized journals, and we will almost certainly
+continue to do work that gets published in such journals (and that we'll be
+proud of). I also don't think there is anything wrong with work that is
+["incremental"](https://elifesciences.org/articles/54867). One day maybe we'll
+publish a Nature/Science article, but that hasn't happened yet (see the group's
 [publications page](https://neuroinformatics.uw.edu/publications/)) to see
 where and what we have published.
 
