@@ -25,7 +25,7 @@ people from spinning their wheels.
 
 ### Meetings
 
-Everyone is expected to attend weekly group meetings and weekly journal clubs /
-code reviews (and to lead these on a regular basis). In addition, a weekly
+Everyone is expected to attend a weekly in-person group meeting. We also hold
+regular zoom meetings with the broader DIRECT group. In addition, a weekly
 one-on-one meeting with Ariel is required to discuss progress on projects and
-work together. Currently, these meetings take place through zoom.
+work together.
