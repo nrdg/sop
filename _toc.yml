@@ -6,6 +6,7 @@ sections:
   - file: general/mvv
   - file: general/coc
   - file: general/onboarding
+  - file: general/learning
   - file: general/prospectives
 - file: comms/comms
   sections:
