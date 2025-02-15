@@ -10,5 +10,6 @@ There are also many videos from Neurohackademy with tutorials and lectures. Link
 
 ## Diffusion MRI
 
+This OHBM blog post is a great starting point for learning about diffusion: https://www.ohbmbrainmappingblog.com/blog/ohbm-ondemand-how-to-diffusion-mri
 
-This section includes general information about the NRDG.
+A variety of more specific topics are available in recordings from the DIPY YouTube channel: https://www.youtube.com/@DiffusionImaginginPython
